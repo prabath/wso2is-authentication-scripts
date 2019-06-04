@@ -7,7 +7,6 @@ function onLoginRequest(context) {
 		onSuccess: function (context) {
 			var idp = context.steps[1].idp;
 			var user = context.steps[1].subject;
-
 			if (idp == 'LOCAL') {
 				var inAllowedRoles = hasAnyOfTheRoles(user, allowedRoles);
 				if (!inAllowedRoles) {
