@@ -5,7 +5,6 @@ function onLoginRequest(context) {
 
 	executeStep(1, {
 		onSuccess: function (context) {
-
 			var idp = context.steps[1].idp;
 			var user = context.steps[1].subject;
 
