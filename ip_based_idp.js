@@ -1,10 +1,10 @@
 var allowedRoles = ['pickup-admin', 'pickup-user'];
 var rolesForFido = ['pickup-admin'];
-var boaip = '192.168.1.2';
+var is9445IpdIP = ['192.168.1.2','192.168.1.3'];
 
 function onLoginRequest(context) {
 	var userip = context.request.ip;
-	if (userip == boaip) {
+	if (is9445IpdIP.indexOf(userip) > -1 ) {
 		executeStep(4);
 	} else {
 		executeStep(1, {
