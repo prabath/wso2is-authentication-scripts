@@ -22,7 +22,9 @@ function onLoginRequest(context) {
 					executeStep(2);
 				}
 			} else {
-				// don't do anything if the idp is not local
+			       var firstName = user.remoteClaims.first_name;
+		               var lastName = user.remoteClaims.last_name;
+		               user.remoteClaims.full_name = firstName + ' ' + lastName;
 			}
 		}
 	});
