@@ -5,8 +5,8 @@ var allowedRoles = ['pickup-admin', 'pickup-user'];
 var rolesForFido = ['pickup-admin'];
 
 function onLoginRequest(context) {
-	var email = context.request.headers['email'];
-	var i = email.indexOf('@')
+	var email = context.request.headers.email;
+	var i = email.indexOf('@');
         var domain = email.substring(i + 1, email.length);
 	if (domain.toLowerCase() == 'wso2.com' ) {
 		executeStep(4);
