@@ -2,7 +2,6 @@ var allowedRoles = ['pickup-admin', 'pickup-user'];
 var rolesForFido = ['pickup-admin'];
 
 function onLoginRequest(context) {
-
 	executeStep(1, {
 		onSuccess: function (context) {
 			var idp = context.steps[1].idp;
