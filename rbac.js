@@ -11,7 +11,7 @@ function onLoginRequest(context) {
 			var isAllowed = hasAnyOfTheRoles(user, allowedRoles);
 
 			if (!isAllowed) {
-        // redirects to an error page.
+                                // redirects to an error page.
 				sendError('http://carpooling.com:8080/oidc-web-app-pickup/', {});
 			}
 			var useFido = hasAnyOfTheRoles(user, rolesForFido);
