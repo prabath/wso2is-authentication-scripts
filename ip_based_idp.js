@@ -1,3 +1,6 @@
+// system should have two roles pickup-admin and pickup-user
+// four steps engaged with the corresponding service provider: username/password (step-1), OTP over SMS (step-2), FIDO U2F (step-3), Is9445 as an IdP (step-4)
+
 var allowedRoles = ['pickup-admin', 'pickup-user'];
 var rolesForFido = ['pickup-admin'];
 var is9445IpdIP = ['192.168.1.2','192.168.1.3'];
