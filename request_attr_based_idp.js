@@ -3,11 +3,12 @@
 
 var allowedRoles = ['pickup-admin', 'pickup-user'];
 var rolesForFido = ['pickup-admin'];
-var is9445IpdIP = ['192.168.1.2','192.168.1.3'];
 
 function onLoginRequest(context) {
-	var userip = context.request.ip;
-	if (is9445IpdIP.indexOf(userip) > -1 ) {
+	var email = context.request.headers['email'];
+	var i = email.indexOf('@')
+        var domain = email.substring(i + 1, email.length);
+	if (domain.toLowerCase() == 'wso2.com' ) {
 		executeStep(4);
 	} else {
 		executeStep(1, {
